@@ -14,4 +14,10 @@ Route::get('receber/nome', function(request $request){
         return 'Meu nome é ' . $nome . ', tenho ' . $idade . ' anos';
         }); 
     
+        Route::get('receber/nome/data/cidade', function(Request $request){
+            $nome = $request->input('nome');
+            $ano = $request->input('ano');
+            $cidade = $request->input('cidade');
+            return 'Meu nome é ' . $nome . ' nasci no ano de ' . $ano . ' na cidade de ' . $cidade;
+            }); 
 
