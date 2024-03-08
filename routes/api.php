@@ -126,3 +126,11 @@ Route::get('receber/nome', function(request $request){
                         
                             return $resultado;
                         });
+
+                        Route::get('mercado', function (request $request) {
+                            $precoProduto = $request->input('Produto');
+                            
+                            $quantidade = $request->input('quantidade');
+                            $resultado = "valor total: " . $precoProduto * $quantidade;
+                            return $resultado;
+                            });        
