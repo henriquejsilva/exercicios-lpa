@@ -81,3 +81,11 @@ Route::get('receber/nome', function(request $request){
                             $resultado = "a area é " . $numeroUm * $numeroDois;
                             return $resultado;
                         });
+
+                        Route::get('mouse',function(Request $request){
+                            $valororiginal = $request->input('valor');
+                            $desconto = $request->input('desconto');
+                            $porcentagem = $valororiginal / 100;
+                            $resultado  = $valororiginal - ($porcentagem * $desconto);
+                            return ' o valor do produto é ' . $valororiginal . ' com o desconto de ' . $desconto . ' o valor atual e de ' . $resultado;
+                        });
