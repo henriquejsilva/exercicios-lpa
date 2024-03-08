@@ -35,3 +35,10 @@ Route::get('receber/nome', function(request $request){
                     $resultado = $numeroUm - $numeroDois - $numeroTres;
                     Return $resultado;
                     });
+
+                    Route::get('Receber/divisão', function(request $request){
+                        $numeroUm = $request->input('primeiroNumero');
+                        $numeroDois = $request->input('segundoNumero');
+                        $resultado = $numeroUm / $numeroDois;
+                        Return $resultado;
+                    });
