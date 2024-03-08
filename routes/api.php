@@ -74,3 +74,10 @@ Route::get('receber/nome', function(request $request){
                         return ' dobro do ' . $primeironumero . ' é igual a ' .$resultado;
                         
                         });
+
+                        route::get('receber/area', function (request $request) {
+                            $numeroUm = $request->input('base');
+                            $numeroDois = $request ->input('altura');
+                            $resultado = "a area é " . $numeroUm * $numeroDois;
+                            return $resultado;
+                        });
