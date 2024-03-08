@@ -103,3 +103,12 @@ Route::get('receber/nome', function(request $request){
                         $resultado = $valorinicial / 10;
                         return $resultado;
                         });
+
+                        Route::get('nvidia',function(Request $request){
+                            $preçoproduto = $request->input('preçoproduto');
+                            $comissão = $request->input('comissão');
+                            $porcentagem = $preçoproduto / 100;
+                            $resultado  = $preçoproduto + ($porcentagem * $comissão);
+                            return $resultado;
+                        });
+        
