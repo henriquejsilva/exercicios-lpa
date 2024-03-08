@@ -59,3 +59,11 @@ Route::get('receber/nome', function(request $request){
                         $resultado = ($numeroUm + $numeroDois + $numeroTres + $numeroQuatro + $numeroCinco) /5;
                         return $resultado;
                     });
+
+                    Route::get('receber/divisa', function (request $request){
+                        $numeroUm = $request->input('primeiroNumero');
+                        $numeroDois = $request->input('segundoNumero');
+                        $resultado = $numeroUm / $numeroDois;
+                        return $resultado;
+                    });
+    
