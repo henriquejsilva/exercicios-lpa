@@ -21,3 +21,9 @@ Route::get('receber/nome', function(request $request){
             return 'Meu nome é ' . $nome . ' nasci no ano de ' . $ano . ' na cidade de ' . $cidade;
             }); 
 
+            Route::get('receber/calculo', function(Request $request){
+                $numeroUm = $request->input('primeiroNumero');
+                $numeroDois = $request->input('segundoNumero');
+                $resultado = $numeroUm + $numeroDois;
+                return $resultado;
+                });
