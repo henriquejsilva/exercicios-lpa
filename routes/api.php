@@ -16,7 +16,7 @@ Route::get('receber/nome', function(request $request){
     
         Route::get('receber/nome/data/cidade', function(Request $request){
             $nome = $request->input('nome');
-            $ano = $request->input('ano');
+            $ano = $request->input('data');
             $cidade = $request->input('cidade');
             return 'Meu nome é ' . $nome . ' nasci no ano de ' . $ano . ' na cidade de ' . $cidade;
             }); 
@@ -30,10 +30,10 @@ Route::get('receber/nome', function(request $request){
 
                 Route::get('receber/subtração', function(request $request){
                     $numeroUm = $request->input('primeiroNumero');
-                    $numeroDois = $request->input('SegundoNumero');
+                    $numeroDois = $request->input('segundoNumero');
                     $numeroTres = $request->input('terceiroNumero');
                     $resultado = $numeroUm - $numeroDois - $numeroTres;
-                    Return $resultado;
+                    return $resultado;
                     });
 
                     Route::get('Receber/divisão', function(request $request){
@@ -68,12 +68,10 @@ Route::get('receber/nome', function(request $request){
                     });
     
                     Route::get('receber/dobro', function(request $request){
-
-                        $primeironumero = $request->input ('primeironumero');
+                    $primeironumero = $request->input ('primeironumero');
                         $resultado = $primeironumero * '2';
                         return ' dobro do ' . $primeironumero . ' é igual a ' .$resultado;
-                        
-                        });
+                         });
 
                         route::get('receber/area', function (request $request) {
                             $numeroUm = $request->input('base');
