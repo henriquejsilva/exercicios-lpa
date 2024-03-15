@@ -18,7 +18,7 @@ Certifique-se de ter os seguintes requisitos atendido antes de começar a trabal
 
 1. Clone este repositório para seu ambiente se desenvolvimento local utilizado o comando: 
 ~~~
-https://github.com/henriquejsilva/exercicios-lpa.git
+git clone https://github.com/henriquejsilva/exercicios-lpa.git
 ~~~
 2.  Acesse o diretório do projeto
 ~~~
