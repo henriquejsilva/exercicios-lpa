@@ -144,3 +144,78 @@ Route::get('receber/nome', function(request $request){
                          }
                          return $retorno;
                         });
+
+                        Route::get('verificar/idade', function(Request $request){
+                               $idade = $request->input('idade');
+
+                               if($idade >= 18){
+                                return "maior de idade";
+                               } else {
+                                return "menor de idade";
+                               }
+                        });
+
+                        Route::get('verificar/par', function(Request $request){
+                          $numero = $request->input('numero');
+
+                          if($numero % 2 == 0){
+                            return 'par';
+                          } else {
+                            return 'impar';
+                          }
+                        });
+
+                        Route::get('enviar/numero', function(Request $request){
+                            $numero = $request->input('numero');
+                            
+                            if($numero > 10){
+                                return "maior que 10";
+                            } else {
+                                return "menor que 10";
+                            }
+                        });
+
+                        Route::get('verificar/calor', function(Request $request){
+                               $calor = $request->input('calor');
+
+                               if($calor > 30){
+                                return "Está quente";
+                               } else {
+                                 return "Não está quente";
+                               }
+                        });
+
+                        Route::get('verificar/maior', function(Request $request){
+                            $numeroUm = $request->input('numeroUm');
+                            $numeroDois = $request->input('numeroDois');
+
+                            if($numeroUm > $numeroDois){
+                                return "maior";
+                            } else { 
+                               return "menor";
+                            }
+                        });
+
+                        Route::get('informar/divisao', function(Request $request){
+                            $numero = $request->input('numero');
+
+                            if($numero % 3 == 0){
+                                return "divisivel por 3";
+                            } else {
+                                return "não divisivel por 3";
+                            }
+                        });
+
+                        Route::get("determine/numero" , function(Request $request){
+                            $numero = $request-> input ('numero');
+                           
+                            if($numero > 0){
+                            return "é positivo";
+                            }
+                            if($numero < 0){
+                            return "é negativo";
+                            } else {
+                        return "é zero";
+                            }
+                        });
+                            
