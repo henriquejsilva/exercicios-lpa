@@ -22,7 +22,7 @@ git clone https://github.com/henriquejsilva/exercicios-lpa.git
 ~~~
 2.  Acesse o diretório do projeto
 ~~~
-cd exercio-lpa
+cd exercicio-lpa
 ~~~
 3. Iniciando o projeto
 ~~~
