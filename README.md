@@ -22,19 +22,19 @@ git clone https://github.com/henriquejsilva/exercicios-lpa.git
 ~~~
 2.  Acesse o diretório do projeto
 ~~~
-cd exercio-lpa
+cd exercicio-lpa
 ~~~
 3. Iniciando o projeto
 ~~~
 composer update
 ~~~
-4. Iniciando o servidor
-~~~
-php artisan serve --port=80
-~~~
-5. Acessar o Visual Studio Code
+4. Acessar o Visual Studio Code
 ~~~
 code .
+~~~
+5. Iniciando o servidor
+~~~
+php artisan serve --port=80
 ~~~
 6. Importar o arquivo do Insomnia
 
