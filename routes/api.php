@@ -133,7 +133,7 @@ Route::get('receber/nome', function(request $request){
                             return $resultado;
                             }); 
                             
-                        Route::get('exemplo/condição', function (Request $request) {
+                        Route::get('exemplo/condição1', function (Request $request) {
                          $idade = $request->input('idade');
                          $retorno = "";
                          if($idade >=18){
@@ -145,7 +145,7 @@ Route::get('receber/nome', function(request $request){
                          return $retorno;
                         });
 
-                        Route::get('verificar/idade', function(Request $request){
+                        Route::get('verificar/idade2', function(Request $request){
                                $idade = $request->input('idade');
 
                                if($idade >= 18){
@@ -155,7 +155,7 @@ Route::get('receber/nome', function(request $request){
                                }
                         });
 
-                        Route::get('verificar/par', function(Request $request){
+                        Route::get('verificar/par3', function(Request $request){
                           $numero = $request->input('numero');
 
                           if($numero % 2 == 0){
@@ -165,7 +165,7 @@ Route::get('receber/nome', function(request $request){
                           }
                         });
 
-                        Route::get('enviar/numero', function(Request $request){
+                        Route::get('enviar/numero4', function(Request $request){
                             $numero = $request->input('numero');
                             
                             if($numero > 10){
@@ -175,7 +175,7 @@ Route::get('receber/nome', function(request $request){
                             }
                         });
 
-                        Route::get('verificar/calor', function(Request $request){
+                        Route::get('verificar/calor5', function(Request $request){
                                $calor = $request->input('calor');
 
                                if($calor > 30){
@@ -185,7 +185,7 @@ Route::get('receber/nome', function(request $request){
                                }
                         });
 
-                        Route::get('verificar/maior', function(Request $request){
+                        Route::get('verificar/maior6', function(Request $request){
                             $numeroUm = $request->input('numeroUm');
                             $numeroDois = $request->input('numeroDois');
 
@@ -196,7 +196,7 @@ Route::get('receber/nome', function(request $request){
                             }
                         });
 
-                        Route::get('informar/divisao', function(Request $request){
+                        Route::get('informar/divisao7', function(Request $request){
                             $numero = $request->input('numero');
 
                             if($numero % 3 == 0){
@@ -206,7 +206,7 @@ Route::get('receber/nome', function(request $request){
                             }
                         });
 
-                        Route::get("determine/numero" , function(Request $request){
+                        Route::get("determine/numero8" , function(Request $request){
                             $numero = $request-> input ('numero');
                            
                             if($numero > 0){
@@ -219,3 +219,96 @@ Route::get('receber/nome', function(request $request){
                             }
                         });
                             
+                        
+                        Route::get('determinar/divisão9', function(Request $request){
+                            $numero = $request->input ('numero');
+
+                            if($numero % 9 == 0){
+                                return "é divisivel por 9";
+                            } else {
+                                return "não é divisivel por 9";
+                            }
+                        });
+
+                        Route::get('determinar/multiplo10', function(Request $request){
+                            $numero = $request->input ('numero');
+
+                            if($numero % 7 == 0){
+                                return "é multiplo de 7";
+                            } else {
+                                 return "não é multiplo de 7";
+                            }
+                        });
+
+                        Route::get('determinar/idade11', function(Request $request){
+                            $numero = $request->input ('numero');
+
+                            if($numero >= 12){
+                                return "Você é um Adolecente";
+                            } else {
+                                return "Você é uma criança";
+                            }
+                        });
+
+                        Route::get('determinar/par12', function(Request $request){
+                            $numero = $request->input('numero');
+
+                             if($numero % 2 == 0){
+                                return "Este numero é par";
+                             } else {
+                                return "Este numero é impar";
+                             }
+                        });
+
+                        Route::get('determinar/positivo13', function(Request $request){
+                              $numero = $request->input('numero');
+
+                              if($numero % 2 != 0){
+                                if($numero > 0){
+                                    return "e positivo e impar";
+                                  }
+                              }
+
+                            });
+
+                            Route::get('detremine/maior14', function(Request $request){
+                                $numero = $request->input('numero');
+
+                                if($numero >= 100){
+                                    return "maior que 100";
+                                } else {
+                                    return "menor que 100";
+                                }
+                            });
+
+                            Route::get('determine/divisor15', function(Request $request){
+                                $numero = $request->input('numero');
+
+                                if($numero % 7 == 0){
+                                    return "é divisivel por 7";
+                                } else {
+                                    return "não é divisivel por 7";
+                                }
+                            });
+
+                            Route::get('determinar/usuario16', function(Request $request){
+                                $usuario = $request->input('usuario');
+
+                                if($usuario == "alice"){
+                                      return "Olá Alice";
+                                }
+                            });
+
+                            Route::get('verificar/carteira17', function(Request $request){
+                                $carteira =$request->input('carteira');
+                                $idade =$request->input('idade');
+
+                                if($idade >= 18){
+                                    if($carteira == "tem carteira"){
+                                        return "pode dirigir";
+                                    } else{
+                                        return "não pode dirigir";
+                                    }                             
+                                }
+                                
+                            });
