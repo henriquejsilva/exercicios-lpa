@@ -312,3 +312,65 @@ Route::get('receber/nome', function(request $request){
                                 }
                                 
                             });
+
+                            Route::get('verificar/numero', function(Request $request){
+                                $numeroUm =$request->input('numeroUm');
+                                $numeroDois =$request->input('numeroDois');
+                                   
+                                if ($numeroUm > $numeroDois ){
+                                     return "O primeiro numero é maior";
+                                } else {
+                                    return "O segundo numero é maior";
+                                }
+                            });
+
+                            Route::get("verificar/nome", function(Request $request){
+                                $nome =$request->input('nome');
+                                $idade = $request->input('idade');
+
+                            
+                                    if ($idade >= 18){
+                                    return "Você é maior de idade " . $nome;
+                            }else{
+                            return "Você não é maior de idade " . $nome;
+                            }
+                    
+                            });
+
+                            Route::get('verificar/zero', function(Request $request){
+                                  $numeroUm =$request->input('numeroUm');
+                                  $numeroDois =$request->input('numeroDois');
+
+                                  if ($numeroUm == 0){
+                                    return "não é possível efetuar a divisão pois o primeiro número é zero";
+                                  }
+                                  if ($numeroDois == 0){
+                                    return "não é possível efetuar a divisão pois o segundo número é zero";
+                                  }
+                                 return $resultado =$numeroUm / $numeroDois;
+                            });
+
+                            Route::get('verificar/divisao', function(Request $request){
+                                   $numeroUm =$request->input('numeroUm');
+                                   $numeroDois =$request->input('numeroDois');
+                                  $resultado= $numeroUm * $numeroDois;
+
+                                  if($resultado > 100){
+                                    return "O resultado é maior que 100";
+                                  } else {
+                                    return "O resultado é menor que 100";
+                                  }
+                            });
+
+                            Route::get('verificar/soma', function(Request $request){
+                                $numeroUm =$request->input('numeroUm');
+                                $numeroDois =$request->input('numeroDois');
+                                $resultado= $numeroUm + $numeroDois;
+                                
+
+                                if($resultado % 2==0){
+                                    return $numeroUm * $numeroDois;
+                                } else {
+                                    return $numeroUm / $numeroDois;
+                                }
+                            });
